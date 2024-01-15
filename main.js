@@ -5,7 +5,7 @@ function changevolume(){
 (() => {
     console.log("[lampavolune] Hello");
     
-    el='<input class="volumeinput" type="range" min="0" max="1" step="0.05" value="0.3" oninput="changevolume();"></input>';
+    el='<input class="volumeinput" type="range" min="0" max="1" step="0.05" value="0.3" style="margin-left: 50px;" oninput="changevolume();"></input>';
 
     observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
