@@ -3,13 +3,15 @@ function changevolume(){
 }
 
 onkeydown = (event) => {
-    if ($(".focus.volumedown")[0]!=undefined){
-        $(".volumeinput")[0].value=Number($(".volumeinput")[0].value)-0.1;
-        changevolume();
-    }
-    if ($(".focus.volumeup")[0]!=undefined){
-        $(".volumeinput")[0].value=Number($(".volumeinput")[0].value)+0.1;
-        changevolume();
+    if (event.key === 'Enter'){
+        if ($(".focus.volumedown")[0]!=undefined){
+            $(".volumeinput")[0].value=Number($(".volumeinput")[0].value)-0.1;
+            changevolume();
+        }
+        if ($(".focus.volumeup")[0]!=undefined){
+            $(".volumeinput")[0].value=Number($(".volumeinput")[0].value)+0.1;
+            changevolume();
+        }
     }
 };
 
