@@ -28,7 +28,7 @@ onkeydown = (event) => {
 (() => {
     console.log("[lampavolume] Hello");
     
-    el='<input class="volumeinput selector" type="range" min="0" max="1" step="0.05" value="0.3" style="margin-left: 50px;" oninput="changevolume();"></input>';
+    el='<input class="volumeinput selector" type="range" min="0" max="1" step="0.05" value="0.3" oninput="changevolume();"></input>';
 
 
     vdbtn='<div class="button selector volumedown" onclick="volumedown();" data-controller="player_panel"><div><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 12L18 12" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div>';
@@ -37,8 +37,8 @@ onkeydown = (event) => {
 
     observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
-            if ($(".player-panel__left")[0]!=undefined && $(".volumeinput")[0]==undefined){
-                $(".player-panel__left")[0].innerHTML=$(".player-panel__left")[0].innerHTML+el+vdbtn+vubtn;
+            if ($(".player-panel__right")[0]!=undefined && $(".volumeinput")[0]==undefined){
+                $(".player-panel__right")[0].innerHTML=el+vdbtn+vubtn+$(".player-panel__right")[0].innerHTML;
                 changevolume();
             }
         });    
