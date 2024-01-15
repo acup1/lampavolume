@@ -3,7 +3,7 @@ function changevolume(){
 }
 
 (() => {
-    console.log("[lampavoluьe] Hello");
+    console.log("[lampavolume] Hello");
     
     el='<input class="volumeinput" type="range" min="0" max="1" step="0.05" value="0.3" style="margin-left: 50px;" oninput="changevolume();"></input>';
 
