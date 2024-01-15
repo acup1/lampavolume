@@ -1,7 +1,9 @@
 (() => {
     console.log("[lampavolune] Hello");
-
-    el='<input class="volumeinput" type="range" min="0" max="1" step="0.05" value="0.3"></input>';
+    function changevolume(){
+        $(".player-video__video")[0].volume=$(".volumeinput").value;
+    }
+    el='<input class="volumeinput" type="range" min="0" max="1" step="0.05" value="0.3" oninput="changevolume();"></input>';
 
     observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
