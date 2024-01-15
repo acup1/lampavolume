@@ -11,6 +11,7 @@ function changevolume(){
         mutations.forEach(function(mutation) {
             if ($(".player-panel__left")[0]!=undefined && $(".volumeinput")[0]==undefined){
                 $(".player-panel__left")[0].innerHTML=$(".player-panel__left")[0].innerHTML+el;
+                changevolume();
             }
         });    
       });
